@@ -2,20 +2,14 @@
 <head>
   <meta charset="utf-8">
   <title>Mocha Tests</title>
-  <link rel="stylesheet" href="node_modules/mocha/mocha.css" />
 </head>
 <body>
-  <div id="mocha"></div>
-  <script src="node_modules/mocha/mocha.js"></script>
-  <script>mocha.setup('tdd')</script>
-  <script src="http://chaijs.com/chai.js"></script>
-  <script src="fernetBrowser.js"></script>
-  <script src="test/encode_test.js"></script>
-  <script src="test/decode_test.js"></script>
-  <script src="test/secret_test.js"></script>
+  <script src="CryptoJS.js"></script>
+  <script src="fernet.js"></script>
   <script>
-    mocha.checkLeaks();
-    mocha.run();
+      var fernet = new Fernet("0hps_met_fKHALAXIOzF0NdaGSngg-M-TTO6UFE35Ig=");
+      console.log(fernet.decode("gAAAAABUsKZo5DHqb3l-jGSrPV-B2r3-QHmrE0d_q2av32KQZkmcr_7FZ7ojPRm5MESehAPcqettOPVlOKjbnkgNsozcrBzoqTij8uii5ZTZNX28ismn-FY="));
+
   </script>
 </body>
 </html>
