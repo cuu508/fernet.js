@@ -1,4 +1,4 @@
-# Fernet.js
+# minifernet.js
 
 A minimal Javascript implementation of <a href="https://github.com/kr/fernet-spec">Fernet symmetric encryption</a>.
 

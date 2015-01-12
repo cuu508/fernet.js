@@ -15,7 +15,7 @@ Fernet.prototype.decode = function(token64) {
     // Check version
     var token = this.b64decode(token64);
     if (token.charCodeAt(0) != 128)
-        throw new Error("Invalid version: " + version);
+        throw new Error("Invalid version: " + token.charCodeAt(0));
 
     var iv              = token.slice(9, 25);
     var ciphertext      = token.slice(25, token.length - 32);
